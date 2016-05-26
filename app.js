@@ -12,6 +12,7 @@ var config = require('./config');
 
 var app = express();
 
+
 app.set('env', config.env);
 
 // view engine setup
@@ -29,6 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+
+app.use('/admin', require('./routes/admin') );
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
