@@ -6,7 +6,7 @@ var router = express.Router();
 
 /* 管理首页 */
 router.get('/', require('./admin/index'));
-
+router.get('/device', require('./admin/device'));
 
 
 
